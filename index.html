@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lazy Lizard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header>
+            <div class="contenedor">
+
+                <h1>Get to Work Lazy Lizard<i class="fas fa-dragon"></i></h1>
+                <div class="anadirTarea">
+                    <h3>Añadir tarea: </h3>
+                    <form action="">
+                        <input id="" type="text" placeholder="Añade una tarea">
+                        <select name="importancia" id="importancia">
+                            <option value="importancia">¿Qué importancia tiene?</option>
+                            <option value="urgente">Urgente</option>
+                            <option value="semanal">Semanal</option>
+                            <option value="mensual">Mensual</option>
+                        </select>
+                        <input id="btAnadir" type="submit" value="Añadir">
+
+                    </form>
+                </div>
+
+                <div class="buscarTarea">
+                    <h3>Buscar tarea: </h3>
+                    <form action="">
+                        <input id="busqueda" type="text" placeholder="¿Qué buscas?">
+                        <button id="buscar">Buscar tarea</button>
+                    </form>
+                </div>
+
+                <div class="filtarImportancia">
+                    <h3>Filtrar por importancia: </h3>
+                    <form action="">
+                        <select name="tipoImportancia" id="tipoImportancia">
+                            <option value="todo">Todo</option>
+                            <option value="urgente">Urgente</option>
+                            <option value="semanal">Semanal</option>
+                            <option value="mensual">Mensual</option>
+                        </select>
+
+                        <button id="buscar">Buscar tareas</button>
+                    </form>
+                </div>
+
+            </div>
+        </header>
+
+
+        <hr>
+        <main>
+            <div class="contenedor">
+
+                <article class="tarea">
+                    <p>Tarea x</p>
+                    <div class="eliminar">
+                        <i class="fas fa-trash"></i>
+                    </div>
+                </article>
+
+                <article class="tarea">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis alias non, quos tempora nostrum
+                        amet!</p>
+                    <div class="eliminar">
+                        <i class="fas fa-trash"></i>
+                    </div>
+                </article>
+
+                <article class="tarea">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, veritatis.</p>
+                    <div class="eliminar">
+                        <i class="fas fa-trash"></i>
+                    </div>
+                </article>
+
+                <article class="tarea">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="eliminar">
+                        <i class="fas fa-trash"></i>
+                    </div>
+                </article>
+                <article class="tarea">
+                    <p>Tarea x</p>
+                    <div class="eliminar">
+                        <i class="fas fa-trash"></i>
+                    </div>
+                </article>
+                <!-- <article class="tarea">
+                    <p>Tarea x</p>
+                    <div class="eliminar">
+                        <i class="fas fa-trash"></i>
+                    </div>
+                </article> -->
+
+
+
+
+            </div>
+        </main>
+
+
+
+        <footer>
+            <p>&copy; Deberes no reservados</p>
+        </footer>
+
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

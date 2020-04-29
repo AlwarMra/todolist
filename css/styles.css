@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d3dede;
+    font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+    width: 75%;
+    margin: 3% auto;
+    box-shadow: 0 0 30px #ccc;
+    background-color: #f0f0f0;
+}
+.contenedor {
+    padding: 3%;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+}
+header div {
+    margin: 1em 0;
+}
+
+h1 {
+    font-family: 'Berkshire Swash', cursive;
+}
+
+h1 i {
+    margin-left: 1em;
+}
+header div h3 {
+    padding: .3em;
+}
+
+hr {
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+main .contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .contenedor .tarea {
+    display: flex;
+    width: 30%;
+    padding: .5em;
+    text-align: center;
+    margin: .5em;
+    height: auto;
+    position: relative;
+    box-shadow: 0 0 10px grey;
+
+}
+main .contenedor .tarea p {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+main .contenedor .tarea .eliminar {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: .2em;
+    background-color: tomato;
+    cursor: pointer;
+}
+
+footer {
+    font-family: 'Berkshire Swash', cursive;
+    background-color: #537576;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
