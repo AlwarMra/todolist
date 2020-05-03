@@ -8,6 +8,7 @@
     <title>Lazy Lizard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/lista.js"></script>
 
 </head>
 
@@ -22,9 +23,9 @@
                 <div class="anadirTarea">
                     <h3>Añadir tarea: </h3>
                     <form action="">
-                        <input id="" type="text" placeholder="Añade una tarea">
+                        <input id="nuevaTarea" type="text" placeholder="Añade una tarea">
                         <select name="importancia" id="importancia">
-                            <option value="importancia">¿Qué importancia tiene?</option>
+                            <option value="queimportancia">¿Qué importancia tiene?</option>
                             <option value="urgente">Urgente</option>
                             <option value="semanal">Semanal</option>
                             <option value="mensual">Mensual</option>
@@ -38,11 +39,11 @@
                     <h3>Buscar tarea: </h3>
                     <form action="">
                         <input id="busqueda" type="text" placeholder="¿Qué buscas?">
-                        <button id="buscar">Buscar tarea</button>
+                        <button id="btBuscar">Buscar tarea</button>
                     </form>
                 </div>
 
-                <div class="filtarImportancia">
+                <div class="buscarImportancia">
                     <h3>Filtrar por importancia: </h3>
                     <form action="">
                         <select name="tipoImportancia" id="tipoImportancia">
@@ -52,7 +53,7 @@
                             <option value="mensual">Mensual</option>
                         </select>
 
-                        <button id="buscar">Buscar tareas</button>
+                        <button id="btFiltrar">Buscar tareas</button>
                     </form>
                 </div>
 
@@ -61,10 +62,12 @@
 
 
         <hr>
-        <main>
-            <div class="contenedor">
 
-                <article class="tarea">
+        
+        <main>
+            <div id="seccionTareas" class="contenedor">
+
+                <!-- <article class="tarea">
                     <p>Tarea x</p>
                     <div class="eliminar">
                         <i class="fas fa-trash"></i>
@@ -84,26 +87,9 @@
                     <div class="eliminar">
                         <i class="fas fa-trash"></i>
                     </div>
-                </article>
-
-                <article class="tarea">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="eliminar">
-                        <i class="fas fa-trash"></i>
-                    </div>
-                </article>
-                <article class="tarea">
-                    <p>Tarea x</p>
-                    <div class="eliminar">
-                        <i class="fas fa-trash"></i>
-                    </div>
-                </article>
-                <!-- <article class="tarea">
-                    <p>Tarea x</p>
-                    <div class="eliminar">
-                        <i class="fas fa-trash"></i>
-                    </div>
                 </article> -->
+
+
 
 
 
@@ -120,7 +106,10 @@
     </div>
 
 
-    <script src="js/main.js"></script>
+
+
+<script src="js/funciones.js"></script>
+
 </body>
 
 </html>
