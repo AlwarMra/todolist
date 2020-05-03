@@ -35,7 +35,11 @@ h1 {
     font-family: 'Berkshire Swash', cursive;
 }
 
-h1 i {
+h1 i:first-child {
+    margin-right: 1em;
+    transform: rotateY(180deg);
+}
+h1 i:last-child {
     margin-left: 1em;
 }
 header div h3 {
