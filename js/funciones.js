@@ -3,34 +3,64 @@
 // 1. Pintar tareas en el HTML 
 
 
-var seccionTareas = document.getElementById('seccionTareas');
+var seccionUrgente = document.getElementById('seccionUrgente');
+var seccionSemanal = document.getElementById('seccionSemanal');
+var seccionMensual = document.getElementById('seccionMensual');
+
 
 function pintarTareas(pListaTareas) {
 
-    seccionTareas.innerHTML = "";
+    seccionUrgente.innerHTML = "";
+    seccionSemanal.innerHTML = "";
+    seccionMensual.innerHTML = "";
 
     pListaTareas.forEach(tarea => {
-        seccionTareas.innerHTML +=
-            ` <article class="tarea">
-                                    <p>${tarea.titulo}</p>
-                                    <div class="eliminar" class="">
-                                        <i class="fas fa-trash"></i>
-                                    </div>
-                                </article>`;
+
+        if (tarea.importancia == 'urgente') {
+
+            seccionUrgente.innerHTML +=
+                ` <article class="tarea" id="${tarea.idTarea}">
+            <p>${tarea.titulo}</p>
+            <div class="eliminar ${tarea.importancia}">
+            <i class="fas fa-trash"></i>
+            </div>
+            </article>`;
+
+
+        } 
+        else if (tarea.importancia == 'semanal') {
+            seccionSemanal.innerHTML +=
+                ` <article class="tarea" id="${tarea.idTarea}">
+            <p>${tarea.titulo}</p>
+            <div class="eliminar ${tarea.importancia}">
+            <i class="fas fa-trash"></i>
+            </div>
+            </article>`;
+        } 
+        else {
+            seccionMensual.innerHTML +=
+                ` <article class="tarea" id="${tarea.idTarea}">
+            <p>${tarea.titulo}</p>
+            <div class="eliminar ${tarea.importancia}">
+            <i class="fas fa-trash"></i>
+            </div>
+            </article>`;
+
+        }
 
 
     });
 
-    let colorEliminar = document.getElementsByClassName('eliminar');
-    let idTarea = document.getElementsByClassName('tarea');
+    // let colorEliminar = document.getElementsByClassName('eliminar');
+    // let idTarea = document.getElementsByClassName('tarea');
 
-    for (let i = 0; i < pListaTareas.length; i++) {
-        let importancia = pListaTareas[i]['importancia'];
-        let id = pListaTareas[i]['idTarea'];
+    // for (let i = 0; i < pListaTareas.length; i++) {
+    //     let importancia = pListaTareas[i]['importancia'];
+    //     let id = pListaTareas[i]['idTarea'];
 
-        colorEliminar[i].classList.add(importancia);
-        idTarea[i].setAttribute('id', id);
-    }
+    //     colorEliminar[i].classList.add(importancia);
+    //     idTarea[i].setAttribute('id', id);
+    // }
 
 
     // Recogemos la clase de borrado cada vez que pintamos para que no queden tareas exluídas.

@@ -47,19 +47,17 @@ hr {
     margin: 0 auto;
 }
 
-
 main .contenedor {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 main .contenedor .tarea {
     display: flex;
-    width: 20%;
+    width: 100%;
     padding: .5em;
     text-align: center;
-    margin: .5em;
+    margin: 1em 0;
     height: auto;
     position: relative;
     box-shadow: 0 0 10px grey;
@@ -68,6 +66,7 @@ main .contenedor .tarea {
 main .contenedor .tarea p {
     width: 100%;
     padding-bottom: 20px;
+    margin: .5em;
 }
 
 main .contenedor .tarea .eliminar {
@@ -85,6 +84,17 @@ footer {
     text-align: center;
     padding: 1em;
     margin-top: 2em;
+}
+
+.seccion {
+    width: 30%;
+    padding: .5em;
+    margin: 0.5em;
+}
+
+.seccion h3 {
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
 }
 
 .urgente {
