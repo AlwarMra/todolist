@@ -14,54 +14,28 @@ function pintarTareas(pListaTareas) {
     seccionSemanal.innerHTML = "";
     seccionMensual.innerHTML = "";
 
+
     pListaTareas.forEach(tarea => {
+        let articuloHTML = ` <article class="tarea" id="${tarea.idTarea}">
+                            <p>${tarea.titulo}</p>
+                            <div class="eliminar ${tarea.importancia}">
+                            <i class="fas fa-trash"></i>
+                            </div>
+                            </article>`;
 
         if (tarea.importancia == 'urgente') {
-
-            seccionUrgente.innerHTML +=
-                ` <article class="tarea" id="${tarea.idTarea}">
-            <p>${tarea.titulo}</p>
-            <div class="eliminar ${tarea.importancia}">
-            <i class="fas fa-trash"></i>
-            </div>
-            </article>`;
-
-
-        } 
-        else if (tarea.importancia == 'semanal') {
-            seccionSemanal.innerHTML +=
-                ` <article class="tarea" id="${tarea.idTarea}">
-            <p>${tarea.titulo}</p>
-            <div class="eliminar ${tarea.importancia}">
-            <i class="fas fa-trash"></i>
-            </div>
-            </article>`;
-        } 
-        else {
-            seccionMensual.innerHTML +=
-                ` <article class="tarea" id="${tarea.idTarea}">
-            <p>${tarea.titulo}</p>
-            <div class="eliminar ${tarea.importancia}">
-            <i class="fas fa-trash"></i>
-            </div>
-            </article>`;
-
+            seccionUrgente.innerHTML += articuloHTML;
         }
+        else if (tarea.importancia == 'semanal') {
+            seccionSemanal.innerHTML += articuloHTML;
+        }
+        else {
+            seccionMensual.innerHTML += articuloHTML;
+        }
+    }
 
 
-    });
-
-    // let colorEliminar = document.getElementsByClassName('eliminar');
-    // let idTarea = document.getElementsByClassName('tarea');
-
-    // for (let i = 0; i < pListaTareas.length; i++) {
-    //     let importancia = pListaTareas[i]['importancia'];
-    //     let id = pListaTareas[i]['idTarea'];
-
-    //     colorEliminar[i].classList.add(importancia);
-    //     idTarea[i].setAttribute('id', id);
-    // }
-
+    );
 
     // Recogemos la clase de borrado cada vez que pintamos para que no queden tareas exluídas.
     var basuras = document.getElementsByClassName('fa-trash');
@@ -115,8 +89,6 @@ function anadirTarea(event) {
 
 
 
-
-
 // 4. Filtrar tarea
 
 var btFiltrar = document.getElementById('btFiltrar');
@@ -128,12 +100,15 @@ function filtrarImportancia(event) {
     let tipoImportancia = document.getElementById('tipoImportancia').value;
     let listaFiltro = new Array();
 
-    for (tarea of listaTareas) {
-        if (tipoImportancia == tarea.importancia) {
-            listaFiltro.push(tarea);
-        }
+    if (tipoImportancia == 'todo') {
+        pintarTareas(listaTareas);
+    } else {
+        for (tarea of listaTareas) {
+            if (tipoImportancia == tarea.importancia) {
+                listaFiltro.push(tarea);
+            }
+        } pintarTareas(listaFiltro);
     }
-    pintarTareas(listaFiltro);
 }
 
 
